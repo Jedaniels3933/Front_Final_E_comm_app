@@ -38,7 +38,7 @@ function OrderList() {
         </h1>
       </div>
       {orders.length === 0 ? (
-        <p>No orders available.</p>
+        <p>Not  available.</p>
       ) : (
         <ListGroup>
           {orders.map((order) => (

@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Route, Routes } from 'react-router-dom';
+import { Container, Nav } from 'react-bootstrap';
 import CustomerForm from './components/customer/CustomerForm';
 import ProductForm from './components/product/ProductForm';
 import OrderForm from './components/order/OrderForm';
@@ -13,13 +13,13 @@ import ProductList from './components/product/ProductList';
 import CustomerList from './components/customer/CustomerList';
 import ProductUpdate from './components/product/ProductUpdate';
 import CustomerUpdate from './components/customer/CustomerUpdate';
-
+import NavBar from './components/NavBar';
 
 
 function App() {
   return (
-    <Router>
-      <Container>
+    <Container>
+        <NavBar />
         <Routes>
           <Route path="/customers" element={<CustomerForm/>} />
           <Route path="/products" element={<ProductForm/>} />
@@ -32,10 +32,9 @@ function App() {
           <Route path="/customers-list" element={<CustomerList/>} />
           <Route path="/edit-product/:productId" element={<ProductUpdate/>} />
           <Route path="/edit-customer/:customerId" element={<CustomerUpdate/>} />
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="*" element={<p>Not Found</p>}/>
         </Routes>
-      </Container>
-    </Router>
+    </Container>
   );
 }
 

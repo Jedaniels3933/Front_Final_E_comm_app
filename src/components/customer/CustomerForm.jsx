@@ -25,7 +25,7 @@ function CustomerForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('http://http://127.0.0.1:5000/ customerData', customerData);
+      await axios.post('http://127.0.0.1:5000/ customerData', customerData);
       alert('Customer added successfully!');
       navigate('/customers');
     }
