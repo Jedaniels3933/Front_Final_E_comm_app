@@ -14,6 +14,8 @@ import CustomerList from './components/customer/CustomerList';
 import ProductUpdate from './components/product/ProductUpdate';
 import CustomerUpdate from './components/customer/CustomerUpdate';
 import NavBar from './components/NavBar';
+import NotFound from './components/NotFound';
+
 
 
 function App() {
